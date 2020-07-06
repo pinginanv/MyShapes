@@ -1,4 +1,4 @@
-public class Triangle extends Shape implements Comparable {
+public class Triangle extends Shape  {
     private double a;
     private double b;
     private double c;
@@ -21,15 +21,5 @@ public class Triangle extends Shape implements Comparable {
         return super.toString() + ", a=" + a + ", b=" + b + ", c=" + c;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        if ( o instanceof Triangle) {
-            Triangle object = (Triangle) o;
-            if (this.caclArea() > object.caclArea()) return 1;
-            else if (this.caclArea() < object.caclArea()) return -1;
-            else return 0;
-        }
 
-        return 0;
-    }
 }
